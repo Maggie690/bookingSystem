@@ -35,4 +35,8 @@ export class CoursesListComponent implements OnInit{
       img: 'angular-logo.png',
     },
   ];
+
+  onCourseBooked(course: any): void {
+    console.log('Parent heard about booking');
+  } 
 }
