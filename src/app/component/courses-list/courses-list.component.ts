@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CurrencyPipe, DatePipe, NgStyle } from '@angular/common';
+// import { CurrencyPipe, DatePipe, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-courses-list',
@@ -35,8 +35,4 @@ export class CoursesListComponent implements OnInit{
       img: 'angular-logo.png',
     },
   ];
-
-  viewDetails(): void {
-    alert('Viewing details');
-  }
 }
