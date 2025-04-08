@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Course } from '../../models/course.model';
 // import { CurrencyPipe, DatePipe, NgStyle } from '@angular/common';
 
 @Component({
@@ -8,12 +9,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './courses-list.component.html',
   styleUrl: './courses-list.component.css',
 })
-export class CoursesListComponent implements OnInit{
-
-  ngOnInit(): void {
-  }
+export class CoursesListComponent implements OnInit {
+  ngOnInit(): void {}
 
   title: string = 'Available courses';
+  wishList: Course[] = [];
 
   courses = [
     {
@@ -22,6 +22,7 @@ export class CoursesListComponent implements OnInit{
       description: 'Learn the basics of Angular',
       price: 49,
       date: '2025-03-01',
+      onSale: true,
       soldOut: false,
       img: 'angular-logo.png',
     },
@@ -31,12 +32,28 @@ export class CoursesListComponent implements OnInit{
       description: 'Deep dive into Angular internals',
       price: 99,
       date: '2025-04-10',
+      onSale: false,
       soldOut: true,
       img: 'angular-logo.png',
     },
+    {
+      id: 3,
+      title: 'RxJS Fundamentals',
+      description: 'Asynchronous data streams',
+      price: 45,
+      date: '2025-05-05',
+      img: 'rxjs-logo.png',
+      soldOut: false,
+      onSale: true,
+    },
   ];
 
-  onCourseBooked(course: any): void {
+  onCourseBooked(course: Course): void {
     console.log('Parent heard about booking');
-  } 
+  }
+
+  onAddWishList(course: Course): void {
+    console.log('Element was added.');
+    this.wishList.push(course);
+  }
 }

@@ -5,9 +5,8 @@
     <p>{{ course.date | date:'longDate'}}</p>
     <p [hidden]="!course.soldOut">Sold out</p>
     <img [src]="course.img" [alt]="course.title" width="100">
-    @if (course.price<50) {
-         <div class="special-offer"> Special offer
-        </div>
-        }
-<button (click)="onBookCourse()">Detail</button>
+    @if (course.price<50) { <div class="special-offer"> Special offer
+</div>}
+<button [disabled]="course.soldOut"  (click)="addWish()"> Add course</button>
+<button [disabled]="course.soldOut" (click)="onBookCourse()">Detail</button>
 </div>
