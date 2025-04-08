@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesListComponent } from './component/courses-list/courses-list.component';
 import { CourseCardComponent } from './component/course-card/course-card.component';
+import { CourseDetailComponent } from './component/course-detail/course-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesListComponent,
-    CourseCardComponent
+    CourseCardComponent,
+    CourseDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
