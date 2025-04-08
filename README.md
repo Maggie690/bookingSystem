@@ -14,3 +14,4 @@ Once the server is running, open your browser and navigate to `http://localhost:
 ```bash
 ng serve -o
 ```
+https://github.com/LinkedInLearning/learning-angular-5979118/blob/05_08/src/app/app.config.ts
